@@ -12,12 +12,15 @@ export default function (props) {
         .then((res)=>{
             console.log(res.data)
         })
+        .catch((err)=>{
+            console.log(err)
+        })
     }
     return (
         <>
             <form onSubmit={submitForm}>
                 <center>                
-                    <input required name='text' placeholder='Username' style={{margin:'20px'}} type="username" onChange={inputChange}  value={FormData.username}/>
+                    <input required name='username' placeholder='Enter username here' style={{margin:'20px'}} type="text" onChange={inputChange}  value={FormData.username}/>
                     <br />
                     <input required name='password' placeholder='Password' style={{ margin: '20px' }} type="password" onChange={inputChange}  value={FormData.password}/>
                     <br />
