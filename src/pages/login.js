@@ -8,7 +8,7 @@ export default function (props) {
     }
     const submitForm = (e) => {
         e.preventDefault()
-        axios.post(`${process.env.NEXT_PUBLIC_API}/login`,FormData)
+        axios.post(`https://mallucoder.xyz/projects/demo/Gdk/backend/api/login.php`,FormData)
         .then((res)=>{
             console.log(res.data)
         })
