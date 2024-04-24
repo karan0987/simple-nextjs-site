@@ -17,9 +17,9 @@ export default function (props) {
         <>
             <form onSubmit={submitForm}>
                 <center>                
-                    <input placeholder='Email' style={{margin:'20px'}} type="mail" onChange={inputChange} value={FormData.email} />
+                    <input required name='email' placeholder='Email' style={{margin:'20px'}} type="email" onChange={inputChange}  value={FormData.email}/>
                     <br />
-                    <input placeholder='Password' style={{ margin: '20px' }} type="password" onChange={inputChange} value={FormData.password} />
+                    <input required name='password' placeholder='Password' style={{ margin: '20px' }} type="password" onChange={inputChange}  value={FormData.password}/>
                     <br />
                     <button type="submit">Login</button></center>
             </form>
