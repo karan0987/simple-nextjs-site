@@ -15,6 +15,7 @@ export default function (props) {
             let data = res.data
             switch (data.code) {
                 case 200:
+                    localStorage.setItem('username',data.data.username)
                     router.push('/dashboard')
                     break;
                 default:
