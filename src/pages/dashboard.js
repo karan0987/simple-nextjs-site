@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function dashboard() {
+  let [username,setUsername] =  useState('')
+  useEffect(()=>{
+    if(localStorage) setUsername(localStorage.getItem('username'))
+  },[localStorage])
   return (
     <div>
-      Hello {localStorage && localStorage.getItem('username')} , You are at dashboard 
+      Hello {username}, You are at dashboard 
     </div>
   )
 }
