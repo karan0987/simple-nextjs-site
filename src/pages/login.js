@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 
 export default function (props) {
-    const [FormData, setFormData] = useState({ email: '', password: '' })
+    const [FormData, setFormData] = useState({ username: '', password: '' })
     const inputChange = (e) => {
         setFormData({ ...FormData, [e.target.name]: e.target.value });
     }
@@ -17,7 +17,7 @@ export default function (props) {
         <>
             <form onSubmit={submitForm}>
                 <center>                
-                    <input required name='email' placeholder='Email' style={{margin:'20px'}} type="email" onChange={inputChange}  value={FormData.email}/>
+                    <input required name='text' placeholder='Username' style={{margin:'20px'}} type="username" onChange={inputChange}  value={FormData.username}/>
                     <br />
                     <input required name='password' placeholder='Password' style={{ margin: '20px' }} type="password" onChange={inputChange}  value={FormData.password}/>
                     <br />
